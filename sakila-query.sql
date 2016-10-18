@@ -27,6 +27,8 @@ from film_actor
 where sakila.film_actor.actor_id = 5;
 
 -- 4. What query would you run to get all the customers in store_id = 1 and inside these cities (1, 42, 312 and 459)? Your query should return customer first name, last name, email, and address.
+-- [Todd] Another way to accomplish the city_id WHERE clause is to use the keyword 'IN'
+-- ... where sakila.customer.stored_id = 1 and sakila.city.city_id IN (1, 42, 312, 459)
 select sakila.customer.first_name, sakila.customer.last_name, sakila.customer.email, sakila.address.address 
 from customer
 	inner join sakila.address
